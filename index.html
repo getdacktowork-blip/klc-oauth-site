@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Kan Local Commander — a personal local automation bridge.">
+  <title>Kan Local Commander | Personal Automation</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="shell">
+    <header class="masthead"><span class="brand-mark" aria-hidden="true">K</span><span class="brand">Kan Local Commander</span><span class="tag">PERSONAL TOOL</span></header>
+    <main>
+      <p class="eyebrow">PERSONAL AUTOMATION / 個人自用工具</p>
+      <h1>本機工作與 Google Drive 之間的受控橋接</h1>
+      <p class="lead">Kan Local Commander（KLC）是供持有人自行使用的 Windows 本機自動化工具，將經授權的 Google Docs 任務轉為受限制的本機工作，並將執行結果寫回專用 Google Drive 資料夾。</p>
+      <p class="lead en" lang="en">KLC is a personally operated Windows automation bridge. It reads authorized Google Docs tasks, processes a constrained set of local operations, and writes receipts back to app-specific Google Drive folders.</p>
+      <div class="rule"></div>
+      <section aria-labelledby="functions">
+        <h2 id="functions">功能與範圍 <span lang="en">/ Functionality</span></h2>
+        <div class="features">
+          <div><strong>任務來源</strong><p>辨識持有人私人、指定命名格式的 Google Docs，讀取任務 JSON，透過 HMAC 簽章佇列送至本機。</p></div>
+          <div><strong>本機執行</strong><p>僅支援明確限定的 ping、list、read、create 與受保護的 replace；不開放任意 Shell 指令。</p></div>
+          <div><strong>結果回傳</strong><p>執行結果、錯誤與核對回條會保存至專用 Google Drive 資料夾及本機紀錄，供持有人查閱。</p></div>
+        </div>
+      </section>
+      <section aria-labelledby="access">
+        <h2 id="access">Google 資料權限 <span lang="en">/ Google Data Access</span></h2>
+        <p>本工具要求 Google Drive 中繼資料唯讀、Google Docs 文件唯讀，以及應用程式建立或獲授權檔案的 Drive 寫入權限。讀取權限在 OAuth 層級可能涵蓋比實際處理範圍更大的資料；KLC 程式只處理符合設定的任務來源。</p>
+        <p class="en" lang="en">Requested scopes include Drive metadata read-only, Docs read-only and limited Drive file write. The OAuth read scopes may grant broader visibility than the documents processed by the application's own rules.</p>
+      </section>
+      <p class="note">本工具目前供單一持有人自用，不提供公開註冊或商業雲端代管服務。</p>
+      <p class="note en" lang="en">This is a single-owner, self-operated tool, not a public SaaS or account-registration service.</p>
+    </main>
+    <footer><a href="./privacy.html">隱私權政策 / Privacy Policy</a><span>Kan Local Commander · 2026</span></footer>
+  </div>
+</body>
+</html>
